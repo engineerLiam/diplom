@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate — Мотивационные цитаты</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>MoodMate</h1>
+      <nav>
+        <a href="mood.html">Главная</a>
+        <a href="exercises.html">Упражнения</a>
+        <a href="history.html">История</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+    </header>
+
+    <main class="quotes-page quotes-with-image">
+      <div class="quotes-text">
+        <h2>Мотивационные цитаты</h2>
+        <p class="quote-text" id="quote">
+          Нажмите кнопку, чтобы получить вдохновение.
+        </p>
+        <button id="new-quote" class="btn">Получить цитату</button>
+      </div>
+
+      <div class="quotes-image">
+        <img src="img/quotes-illustration.svg" alt="Мотивация" />
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 MoodMate</p>
+    </footer>
+
+    <script>
+      const quotes = [
+        "Поверь в себя и всё получится.",
+        "Даже самый длинный путь начинается с первого шага.",
+        "Ты сильнее, чем тебе кажется.",
+        "Каждый день — новый шанс изменить свою жизнь.",
+        "Ошибки — это часть пути к успеху.",
+        "Дыши. Всё временно. Ты справишься.",
+        "Ты заслуживаешь заботы и любви, особенно от себя самого.",
+      ];
+
+      const quoteElement = document.getElementById("quote");
+      const button = document.getElementById("new-quote");
+
+      button.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteElement.textContent = quotes[randomIndex];
+      });
+    </script>
+  </body>
+</html>

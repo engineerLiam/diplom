@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate — Профиль</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <header>
+        <h1>MoodMate</h1>
+        <nav>
+          <a href="mood.html">Главная</a>
+          <a href="exercises.html">Упражнения</a>
+          <a href="history.html">История</a>
+          <a href="quotes.html">Цитаты</a>
+        </nav>
+      </header>
+    </header>
+    <main class="profile">
+      <h2>Личный кабинет</h2>
+      <div class="profile-info">
+        <p><strong>ID:</strong> <span id="user-id">123456</span></p>
+        <p><strong>Имя:</strong> <span id="user-name">Имя</span></p>
+        <p>
+          <strong>Email:</strong> <span id="user-email">user@example.com</span>
+        </p>
+      </div>
+
+      <button id="edit-btn">Редактировать</button>
+
+      <form id="edit-form" style="display: none">
+        <label for="name">Новое имя</label>
+        <input type="text" id="name" placeholder="Имя" />
+
+        <label for="email">Новая почта</label>
+        <input type="email" id="email" placeholder="Email" />
+
+        <label for="password">Новый пароль</label>
+        <input type="password" id="password" placeholder="Пароль" />
+
+        <button type="submit">Сохранить изменения</button>
+      </form>
+      <!--
+      <div class="profile-illustration">
+        <img src="img/profile-illustration.svg" alt="Профиль" />
+      </div>
+    --></main>
+
+    <footer>
+      <p>&copy; 2025 MoodMate</p>
+    </footer>
+
+    <script>
+      const editBtn = document.getElementById("edit-btn");
+      const form = document.getElementById("edit-form");
+
+      editBtn.addEventListener("click", () => {
+        form.style.display = form.style.display === "none" ? "block" : "none";
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("user-name").textContent =
+          document.getElementById("name").value;
+        document.getElementById("user-email").textContent =
+          document.getElementById("email").value;
+        form.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

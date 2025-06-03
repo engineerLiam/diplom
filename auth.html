@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate — Вход / Регистрация</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main class="auth-container with-image">
+      <h1>MoodMate</h1>
+      <div class="auth-content">
+        <div class="auth-forms">
+          <div class="tabs">
+            <button id="loginTab" class="tab active">Вход</button>
+            <button id="registerTab" class="tab">Регистрация</button>
+          </div>
+
+          <div id="loginForm" class="form">
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <button>Войти</button>
+            <button id="anonLogin" class="secondary-button">
+              Анонимный вход
+            </button>
+          </div>
+
+          <div id="registerForm" class="form hidden">
+            <input type="text" placeholder="Имя пользователя" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <button>Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
+      <div class="auth-illustration">
+        <img src="img/auth-illustration.svg" alt="Иллюстрация MoodMate" />
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 MoodMate</p>
+    </footer>
+
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate — История</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <h1>MoodMate</h1>
+        <nav>
+          <a href="mood.html">Главная</a>
+          <a href="exercises.html">Упражнения</a>
+          <a href="quotes.html">Цитаты</a>
+          <a href="profile.html">Профиль</a>
+      </header>
+
+      <main class="history-layout">
+  <section class="history-section">
+    <h2>История настроения</h2>
+    <div class="chart-container">
+  <canvas id="moodChart" width="400" height="200"></canvas>
+</div>
+<div>
+    <h3>Список записей</h3>
+    <ul id="moodList"></ul>
+    <div class="history-image">
+    <img src="img/history-illustration.svg" alt="График настроения" />
+  </div>
+  </div>
+  </section>
+</main>
+
+      <footer>
+        <p>© 2025 MoodMate</p>
+      </footer>
+    </div>
+
+    <script src="scripts/history.js"></script>
+  </body>
+</html>

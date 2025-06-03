@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate — Упражнения</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <h1>MoodMate</h1>
+        <nav>
+          <a href="mood.html">Главная</a>
+          <a href="history.html">История</a>
+          <a href="quotes.html">Цитаты</a>
+          <a href="profile.html">Профиль</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="exercises-section exercises-with-image">
+          <div class="exercise-image">
+            <img
+              src="img/exercise-illustration.svg"
+              alt="Иллюстрация упражнений"
+            />
+          </div>
+
+          <div class="exercise-content-wrapper">
+            <h2>Упражнения для ума и тела</h2>
+
+            <div class="exercise-list">
+              <button onclick="showExercise('breathing')">Дыхательное</button>
+              <button onclick="showExercise('grounding')">Заземление</button>
+              <button onclick="showExercise('stretching')">Растяжка</button>
+            </div>
+
+            <div id="exerciseContent" class="exercise-content">
+              <p>Выберите упражнение, чтобы увидеть инструкции.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 MoodMate</p>
+      </footer>
+    </div>
+
+    <script src="scripts/exercises.js"></script>
+  </body>
+</html>

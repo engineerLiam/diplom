@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMate</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <h1>MoodMate</h1>
+        <nav>
+          <a href="exercises.html">Упражнения</a>
+          <a href="history.html">История</a>
+          <a href="quotes.html">Цитаты</a>
+          <a href="profile.html">Профиль</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="mood-section mood-with-image">
+          <div class="mood-form">
+            <h2>Как вы себя чувствуете сегодня?</h2>
+            <form id="mood-form">
+              <label for="mood">Настроение:</label>
+              <select id="mood" required>
+                <option value="">Выберите...</option>
+                <option value="Отлично">😄 Отлично</option>
+                <option value="Хорошо">😊 Хорошо</option>
+                <option value="Нормально">😐 Нормально</option>
+                <option value="Плохо">😟 Плохо</option>
+                <option value="Ужасно">😞 Ужасно</option>
+              </select>
+
+              <label for="comment">Комментарий (необязательно):</label>
+              <textarea
+                id="comment"
+                rows="4"
+                placeholder="Напишите, если хотите..."
+              ></textarea>
+
+              <button type="submit">Сохранить</button>
+            </form>
+
+            <div id="mood-feedback"></div>
+          </div>
+
+          <div class="mood-image">
+            <img src="img/mood-illustration.svg" alt="Настроение" />
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 MoodMate</p>
+      </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
